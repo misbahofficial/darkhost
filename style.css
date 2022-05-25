@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/*font-family: 'Poppins', sans-serif;*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+/* font-family: 'Playfair Display', serif; */
+
+:root{
+    --background-color: rgb(36, 28, 32);
+    --text-color: rgb(170, 162, 162);
+    --text-color-hover: rgb(238, 212, 212);
+    --main-font-size: 1.2rem;
+    --main-font-family: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/************ Nav menu styles *************/
+.nav-menu{
+    width: 100%;
+    height: 100px;
+    background: var(--background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-icon{
+    color: var(--text-color);
+    font-size: var(--main-font-size);
+    font-family: var(--main-font-family);
+    margin-left: 1.2rem;
+}
+.nav-list > ul{
+    display: flex;
+}
+.nav-list > ul > li{
+    list-style: none;
+    margin: 0 10px 0 10px;
+    padding: 5px;
+}
+.nav-list > ul > li > a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-family: var(--main-font-family);
+    font-size: 1.1rem;
+}
+.nav-list > ul > li > a:hover{
+    color: white;
+}
+#login-btn{
+    background: rgb(73, 73, 233);
+    transition: 0.2s;
+}
+#login-btn:hover{
+    background: rgb(25, 25, 221);
+}
+#login-btn > a{
+    color: white;
+}
+#signup-btn{
+    background: rgb(95, 221, 95);
+    transition: 0.2s;
+}
+#signup-btn:hover{
+    background: rgb(12, 204, 12);
+}
+#signup-btn > a{
+    color: rgb(87, 79, 79);
+}
+
+/***** toggle button styles ******/
+
+.toggle-btn {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-btn .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+    .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-icon{
+        margin-top: 22px;
+    }
+
+    .toggle-btn {
+        display: flex;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        display: none;
+        width: 100%;
+        margin-top: 20px;
+        background: black;
+        z-index: 1;
+    }
+
+    .nav-list ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-list ul li {
+        text-align: center;
+    }
+
+    .nav-list ul li a {
+        padding: .5rem 1rem;
+        color: white;
+    }
+    .nav-list ul li a:hover{
+        color: var(--text-color);
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}
+
+
+/*********** Header styles ************/
+
+.header{
+    width: 100%;
+    height: 84vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url('pics/header-pic.jpg');
+    overflow: hidden;
+}
+.header-title{
+    position: relative;
+    top: 15vh;
+    text-align: center;
+}
+.header-title h1{
+    color: white;
+    font-size: 100px;
+    line-height: 100px;
+    font-family: 'Playfair Display', serif;
+}
+.header-title a{
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    padding: 20px 40px;
+    margin-top: 50px;
+    font-size: 1.4rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    transition: 0.2s;
+    font-family: var(--main-font-family);
+}
+.header-title a:hover{
+    background: white;
+    color: black;
+}
+
+@media (max-width: 600px){
+    .header-title h1{
+        font-size: 30px;
+        line-height: 50px;
+    }
+    .header-title a{
+        padding: 10px 20px;
+        margin-top: 50px;
+        font-size: 1.4rem;
+        border-radius: 5px;
+    }
+}
+
+/****** Server info styles ******/
+
+.server-info{
+    width: 100%;
+    height: 80vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('pics/server.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.info{
+    width: 40%;
+    height: 80%;
+    background: rgba(0,0,0,0.7);
+    position: relative;
+    top: 10%;
+    left: 5%;
+    text-align: center;
+    border-radius: 10px;
+}
+.info h1{
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 80px;
+    font-family: 'Playfair Display', serif;
+}
+.genral-btn{
+    position: relative;
+    top: 130px;
+    display: inline;
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-family: var(--main-font-family);
+    transition: 0.2s;
+}
+.genral-btn:hover{
+    color: black;
+    background: white;
+}
+
+@media (max-width: 600px){
+    .info{
+        width: 80%;
+        top: 10%;
+        left: 0;
+        margin: auto;
+    }
+    .info h1{
+        font-size: 30px;
+    }
+}
+
+/****** pricing section style ******/
+
+.pricing{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.3), rgba(0,0,0,0.1)), url('pics/dollar-pic.jpg');
+    background-size: contain;
+}
+
+.price-card{
+    width: 20%;
+    height: 90%;
+    background: rgba(0,0,0,0.8);
+    position: relative;
+    top: 5%;
+    color: white;
+    border-radius: 10px;
+}
+.price-card h1{
+    margin: 10px;
+    text-align: center;
+    font-family: var(--main-font-family);
+}
+.card-body{
+    font-size: 0.9rem;
+    padding: 20px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.card-btn a{
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 31%;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    font-family: var(--main-font-family);
+    color: rgba(255, 255, 255, 0.8);
+    transition: 0.2s;
+}
+.card-btn a:hover{
+    color: black;
+    background: white;
+}
+
+@media (max-width: 600px){
+    .pricing{
+        flex-direction: column;
+        height: auto;
+    }
+    .price-card{
+        width: 90%;
+        margin: 10px auto;  
+    }
+    .card-btn a{
+        margin-bottom: 20px;
+    }
+}
+
+/***** security section styles *******/
+
+.security{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-image: linear-gradient(180deg,rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('pics/office.jpg');
+    background-size: contain;
+}
+.security-info{
+    width: 40%;
+    height: 80%;
+    margin: 0px 40px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+}
+.security-info h1{
+    text-align: center;
+    padding: 20px;
+    margin: 40px 0;
+    line-height: 70px;
+    font-family: sans-serif;
+}
+
+@media (max-width: 600px){
+    .security-info{
+        width: 80%;
+    }
+    .security-info h1{
+        font-size: 1.2rem;
+        line-height: 50px;
+    }
+}
+
+/**** footer section styles ****/
+
+.footer{
+    width: 100%;
+    background: black;
+    color: white;
+    font-family: var(--main-font-family);
+}
+.footer h1{
+    font-family: 'Playfair Display', serif;
+}
+.top-section{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 20px;
+}
+.top-section a{
+    text-decoration: none;
+    color: white;
+}
+.top-section ul li{
+    list-style: none;
+}
+.top-section ul li a:hover{
+    color: rgba(255,255,255,0.7);
+}
+.top-section ul{
+    padding-top: 20px;
+}
+.contact .firts-p{
+    padding-top: 20px;
+}
+
+.bottom-section{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+.bottom-section span{
+    color: lime;
+}
+
+@media (max-width: 600px){
+    .top-section{
+        flex-direction: column;
+    }
+}
